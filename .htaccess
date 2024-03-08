@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Réécriture pour les fichiers PHP dans le dossier 'page'
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ pages/$1.php [L]
+
+# Réécriture pour les fichiers PHP dans le dossier 'page'
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [L]
